@@ -1,6 +1,6 @@
 const db = require("./../config/db");
 
-// GET /users/:id
+
 const getUserById = (req, res) => {
   const { id } = req.params;
   db.query("SELECT * FROM users WHERE id = ?", [id], (err, results) => {
@@ -10,7 +10,6 @@ const getUserById = (req, res) => {
   });
 };
 
-// POST /users
 const createUser = (req, res) => {
 
   const { name, password } = req.body;
